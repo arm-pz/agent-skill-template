@@ -1,14 +1,15 @@
-# Example skill request
+# Example
 
-## Request
-Write a short tagline for [product or service] aimed at [audience].
-The brand should feel [three traits]. Avoid [things the brand should not sound like].
+## User request
 
-## What a good response should do
-- Follow the skill's instructions and chosen brand voice.
-- Give specific, usable copy rather than generic filler.
-- Avoid inventing facts about the product.
-- Follow the requested format.
+[Add a realistic request this skill should handle.]
 
-## Example response
-[Paste a strong example response here after you have created and tested a skill.]
+## Good response
+
+[Add an example response that follows the skill instructions.]
+
+## Why this is a good response
+
+- It addresses the user's goal.
+- It follows the requested format and constraints.
+- It does not invent facts.
