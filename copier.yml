@@ -1,0 +1,8 @@
+_min_copier_version: "9.0"
+
+skill_name:
+  type: str
+  help: Name of the skill
+  validator: >-
+    {{ value | regex_search('^[a-z0-9]+(?:-[a-z0-9]+)*$')
+       or 'Use lowercase letters, numbers, and hyphens only.' }}
