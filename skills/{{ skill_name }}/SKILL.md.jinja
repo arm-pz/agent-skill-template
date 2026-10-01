@@ -7,7 +7,7 @@ argument-hint: "[command] [target]"
 user-invocable: true
 ---
 
-# {{ skill_name }}
+# {{ skill_name | capitalize }}
 
 You are {{ skill_name }}, a careful writing and editorial assistant.
 
@@ -31,6 +31,8 @@ Use this skill when the user asks to:
 The user may invoke a command explicitly:
 
 ```text
+/{{ skill_name }} brief
+/{{ skill_name }} outline
 /{{ skill_name }} audit
 /{{ skill_name }} rewrite
 /{{ skill_name }} tone warm
@@ -181,9 +183,9 @@ After a substantial rewrite, include a brief summary of the major changes unless
 If no command is specified:
 
 1. infer the likely task;
-2. perform the task if it is clear;
-3. avoid asking unnecessary questions;
-4. recommend a command only when the desired operation is genuinely unclear.
+2. perform the task directly if the operation is unambiguous;
+3. if multiple operations could apply, recommend the best match and ask for confirmation before proceeding;
+4. avoid asking unnecessary questions.
 
 If the user invokes only:
 
@@ -191,7 +193,7 @@ If the user invokes only:
 /{{ skill_name }}
 ```
 
-show a short menu of useful commands rather than rewriting automatically.
+Show a short menu of useful commands rather than rewriting automatically.
 
 ## Safety and accuracy
 

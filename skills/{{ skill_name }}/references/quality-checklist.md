@@ -11,6 +11,9 @@ Before responding, check the following.
 
 ## Meaning
 
+- Did I understand what the user asked for?
+- Did I choose the appropriate operation?
+- Did I choose the least invasive operation that satisfies the request?
 - Did I preserve the intended meaning?
 - Did I preserve important facts?
 - Did I preserve names, numbers, dates, and quotations?

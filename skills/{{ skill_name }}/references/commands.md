@@ -51,7 +51,7 @@ Before drafting, infer:
 - what tone is appropriate;
 - what length and format are required.
 
-Do not invent product capabilities, statistics, events, or personal experiences.
+Do not invent product capabilities, statistics, events, or personal experiences. If essential information is missing, either use clearly marked placeholders like [launch date] or ask one focused question — do both only if the gap blocks the entire draft.
 
 ## `develop`
 
@@ -96,6 +96,8 @@ Prioritize major problems over minor stylistic preferences.
 ## `audit`
 
 Perform a systematic review.
+
+Return a scorecard followed by findings. Use the format in `references/output-formats.md`.
 
 Assess:
 
@@ -274,6 +276,8 @@ You may change:
 
 Preserve factual content and intended meaning.
 
+Use the output format in `references/output-formats.md`.
+
 ## `polish`
 
 Perform a final refinement pass.
@@ -381,6 +385,8 @@ Useful tone dimensions include:
 - authoritative or collaborative.
 
 Translate labels into concrete writing decisions. Do not rely on vague adjectives alone.
+
+For example, "warm" means: use direct human language, acknowledge the reader's situation, avoid excessive enthusiasm, use contractions where appropriate, do not use forced jokes.
 
 ## `formalize`
 

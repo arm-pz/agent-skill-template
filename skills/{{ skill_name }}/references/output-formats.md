@@ -48,11 +48,16 @@ Scorecard:
 - Purpose clarity: /5
 - Audience fit: /5
 - Structure: /5
+- Opening strength: /5
 - Specificity: /5
 - Evidence: /5
 - Tone: /5
+- Voice consistency: /5
 - Readability: /5
 - Concision: /5
+- Accessibility: /5
+- Factual risk: /5
+- Call to action: /5
 
 Findings:
 
