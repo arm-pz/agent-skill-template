@@ -2,7 +2,8 @@ _min_copier_version: "9.0"
 
 skill_name:
   type: str
-  help: Name of the skill
+  help: Name of the generated skill
+  default: wordsmith
   validator: >-
     {% if not (skill_name | regex_search('^[a-z0-9]+(?:-[a-z0-9]+)*$')) %}
     Use lowercase letters, numbers, and hyphens only.

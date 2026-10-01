@@ -1,45 +1,231 @@
 # {{ skill_name }}
 
-A reusable AI agent skill in the `SKILL.md` format.
+A structured AI writing and editorial skill for drafting, rewriting, critique, clarity, tone, concision, and publication review.
 
-## Structure
+## What this skill does
 
-The skill is located at:
+`{{ skill_name }}` helps with:
+
+- creating drafts from ideas or notes;
+- building outlines;
+- rewriting existing text;
+- preserving the author's voice;
+- improving grammar and clarity;
+- tightening long or repetitive writing;
+- changing tone;
+- reviewing structure and audience fit;
+- identifying unsupported claims;
+- preparing content for publication.
+
+## Installation
+
+Copy the following directory into the skills directory supported by your AI agent:
 
 ```text
-skills/{{ skill_name }}/SKILL.md
+skills/{{ skill_name }}/
 ```
 
-Edit `skills/{{ skill_name }}/SKILL.md`. Add optional examples or reference files inside `skills/{{ skill_name }}/`. Test the skill using prompts in `tests/test-prompts.md`.
+Depending on the agent platform, that may be one of:
 
-The skill folder contains the skill itself. The `tests/` folder is for people testing the skill; it is not needed when installing the skill.
+```text
+.claude/skills/{{ skill_name }}/
+.agents/skills/{{ skill_name }}/
+.cursor/skills/{{ skill_name }}/
+.qoder/skills/{{ skill_name }}/
+```
 
-## Install
+Consult the documentation for the agent platform you use to determine the correct location.
 
-Copy the complete skill folder—not just `SKILL.md`—to the directory used by your agent:
+## Usage
 
-| Agent | Project-level location |
+You can invoke the skill with a command:
+
+```text
+/{{ skill_name }} draft
+/{{ skill_name }} rewrite
+/{{ skill_name }} critique
+/{{ skill_name }} audit
+/{{ skill_name }} tighten
+/{{ skill_name }} polish
+/{{ skill_name }} final
+```
+
+You can also use natural language:
+
+```text
+Rewrite this email to sound warm and confident.
+```
+
+```text
+Check this article for repetition and unsupported claims.
+```
+
+```text
+Make this explanation easier for a general audience to understand.
+```
+
+## Commands
+
+### Build
+
+- `brief` — turn an idea into a clear writing brief;
+- `outline` — create a logical structure;
+- `draft` — write new content;
+- `develop` — expand notes into a complete piece;
+- `compose` — combine fragments into one coherent draft;
+- `continue` — continue an existing piece;
+- `finish` — complete an unfinished draft.
+
+### Evaluate
+
+- `critique` — explain what works and what needs improvement;
+- `audit` — perform a structured quality review;
+- `diagnose` — identify the main reason a piece is weak;
+- `clarity` — identify confusing or ambiguous language;
+- `voice` — analyze voice and style;
+- `structure` — review organization and flow;
+- `audience` — check audience fit;
+- `accuracy` — identify claims that require verification;
+- `readability` — review complexity and accessibility.
+
+### Refine
+
+- `edit` — improve grammar and wording while preserving the voice;
+- `rewrite` — substantially transform the writing;
+- `polish` — perform a final refinement pass;
+- `tighten` — make the writing shorter and more direct;
+- `simplify` — make difficult writing easier to understand;
+- `smooth` — improve flow and transitions;
+- `strengthen` — improve weak arguments or wording;
+- `proof` — correct mechanical errors.
+
+### Adapt
+
+- `tone` — change the emotional or professional tone;
+- `formalize` — make writing more formal;
+- `humanize` — make writing warmer and less mechanical;
+- `shorten` — reduce the length;
+- `expand` — add useful detail;
+- `summarize` — produce a concise version;
+- `headline` — create titles and headings;
+- `subject` — create email subject lines;
+- `repurpose` — adapt content for multiple channels;
+- `translate` — translate while preserving intent;
+- `localize` — adapt language and cultural references.
+
+### Prepare
+
+- `factcheck` — identify factual claims that need verification;
+- `evidence` — identify where sources or citations are needed;
+- `inclusive` — review language for unnecessary exclusion or stereotyping;
+- `accessibility` — improve readability and accessibility;
+- `consistency` — check names, terms, dates, and formatting;
+- `compare` — compare two versions;
+- `diff` — explain what changed;
+- `final` — prepare content for publication or sending;
+- `release` — return only the final copy.
+
+## Common aliases
+
+These aliases map to the main commands:
+
+| Alias | Main command |
 |---|---|
-| Claude Code | `.claude/skills/{{ skill_name }}/` |
-| Codex | `.agents/skills/{{ skill_name }}/` |
-| Cursor | `.agents/skills/{{ skill_name }}/` or `.cursor/skills/{{ skill_name }}/` |
-| Qoder | `.qoder/skills/{{ skill_name }}/` |
+| `proofread` | `edit` |
+| `grammar` | `edit` |
+| `review` | `critique` |
+| `check` | `audit` |
+| `shorten` | `tighten` |
+| `condense` | `tighten` |
+| `make-clear` | `clarity` |
+| `make-simple` | `simplify` |
+| `ready-to-send` | `final` |
+| `publication` | `final` |
 
-The same skill files can be copied to more than one agent's skill directory.
+## Typical workflows
 
-## Skill file requirements
+### Write something new
 
-Each skill folder needs a `SKILL.md` file. It begins with YAML metadata containing:
+```text
+/{{ skill_name }} brief
+/{{ skill_name }} outline
+/{{ skill_name }} draft
+/{{ skill_name }} critique
+/{{ skill_name }} polish
+```
 
-- `name`: a short identifier using lowercase letters and hyphens
-- `description`: what the skill does and the kinds of requests that should activate it
+### Improve existing writing
 
-The Markdown body contains the skill instructions.
+```text
+/{{ skill_name }} critique
+/{{ skill_name }} rewrite
+/{{ skill_name }} polish
+```
 
-## Test checklist
+### Prepare an email
 
-- Does the skill activate for the requests it is meant to handle?
-- Does it follow its own instructions?
-- Does it handle vague requests sensibly?
-- Does it avoid inventing facts?
-- Are the results useful and distinct across different test prompts?
+```text
+/{{ skill_name }} rewrite
+/{{ skill_name }} tone warm and direct
+/{{ skill_name }} tighten
+/{{ skill_name }} final
+```
+
+### Prepare important content
+
+```text
+/{{ skill_name }} audit
+/{{ skill_name }} factcheck
+/{{ skill_name }} accessibility
+/{{ skill_name }} final
+```
+
+## Design principles
+
+`{{ skill_name }}` should:
+
+- preserve the author's intended meaning;
+- preserve important facts, names, numbers, and quotations;
+- avoid inventing facts, sources, statistics, or experiences;
+- match the requested audience and tone;
+- use clear and direct language;
+- preserve the author's voice unless asked to change it;
+- explain substantial changes;
+- identify uncertainty instead of pretending to know;
+- return the requested writing before lengthy commentary.
+
+`{{ skill_name }}` should not:
+
+- silently change dates, numbers, names, or commitments;
+- make unsupported claims sound certain;
+- replace a personal voice with generic corporate language;
+- rewrite everything when the user only requested proofreading;
+- claim that content is factually correct without verification;
+- add fake citations or sources.
+
+## Development
+
+The source repository is a Copier template.
+
+Generate a new project:
+
+```bash
+copier copy https://github.com/arm-pz/agent-skill-template.git wordsmith
+```
+
+Update a previously generated project:
+
+```bash
+cd wordsmith
+copier update
+```
+
+Copier stores the original answers in:
+
+```text
+.copier-answers.yml
+```
+
+## License
+
+Add your chosen license here.
