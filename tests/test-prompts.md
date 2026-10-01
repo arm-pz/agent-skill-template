@@ -1,22 +1,27 @@
 # Skill test prompts
 
-Use these prompts to check whether a skill follows its instructions.
+Replace these placeholders with requests that test your skill.
 
 ## Test 1: Typical request
-[Write a normal request the skill is designed to handle.]
 
-## Test 2: Very little detail
-[Write a request with minimal context. Check whether the skill makes reasonable assumptions or asks only necessary questions.]
+[Add an ordinary request the skill is designed to handle.]
 
-## Test 3: Specific constraints
-[Write a request with a clear tone, audience, length, and words or ideas to avoid.]
+## Test 2: Brief request
 
-## Test 4: Unusual request
-[Write a request that tests whether the skill can handle an edge case without ignoring its core rules.]
+[Add a request with very little detail. Check whether the skill makes sensible assumptions.]
+
+## Test 3: Detailed constraints
+
+[Add a request with a specific audience, tone, format, and constraints.]
+
+## Test 4: Edge case
+
+[Add a request that tests whether the skill follows its rules when the task is unusual.]
 
 ## Review checklist
-- Did the response follow the skill's instructions?
-- Did it match the requested voice and format?
+
+- Did the skill follow its instructions?
+- Did the response fit the user's goal and constraints?
 - Was it specific and useful?
 - Did it avoid making up facts?
-- Did it avoid clichés or unwanted language?
+- Did it use the requested format?
