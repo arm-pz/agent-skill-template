@@ -8,3 +8,8 @@ skill_name:
     {% if not (skill_name | regex_search('^[a-z0-9]+(?:-[a-z0-9]+)*$')) %}
     Use lowercase letters, numbers, and hyphens only.
     {% endif %}
+
+github_repo:
+  type: str
+  help: GitHub owner/name of the generated skill repository (used in install instructions)
+  default: arm-pz/{{ skill_name }}

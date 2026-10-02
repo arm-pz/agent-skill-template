@@ -40,13 +40,13 @@ Consult the documentation for the agent platform you use to determine the correc
 Or install via the Skills CLI:
 
 ```bash
-npx skills add arm-pz/agent-skill-template --skill {{ skill_name }}
+npx skills add {{ github_repo }} --skill {{ skill_name }}
 ```
 
 For Claude Code specifically:
 
 ```bash
-npx skills add arm-pz/agent-skill-template --skill {{ skill_name }} --agent claude-code
+npx skills add {{ github_repo }} --skill {{ skill_name }} --agent claude-code
 ```
 
 ## Usage
@@ -234,13 +234,13 @@ The source repository is a Copier template.
 Generate a new project:
 
 ```bash
-copier copy https://github.com/arm-pz/agent-skill-template.git wordsmith
+copier copy https://github.com/arm-pz/agent-skill-template.git {{ skill_name }}
 ```
 
 Update a previously generated project:
 
 ```bash
-cd wordsmith
+cd {{ skill_name }}
 copier update
 ```
 
